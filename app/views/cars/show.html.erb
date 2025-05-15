@@ -1,0 +1,16 @@
+
+
+
+  <h1><%= @car.brand %></h1>
+  <h2><%= @car.model %></h2>
+  <p><%= @car.year %></p>
+  <p><%= @car.fuel %></p>
+
+
+
+  <%= simple_form_for [@car, @review] do |f| %>
+    <%= f.input :comment, placeholder: "Your comment" %>
+    <%= f.input :rating %>
+    <%= f.submit "Add Review", class: "btn btn-info" %>
+  <% end %>
+
